@@ -4,6 +4,24 @@ public class Sorts{
   *@param data  the elements to be sorted.
   */
   public static void bubbleSort(int[] data){
-    
+    int temp = 0;
+    int swaps = 0
+    for (int i = 0; i<data.length-1;i++){
+      swaps = 0;
+      for (int j = 0 j<data.length-i-1;j++){
+        if(data[i]>data[i+1]){
+          temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+          swaps +=1;
+        }
+      }
+
+      if (swaps==0){
+        i = data.length;
+      }
+    }
   }
+
+  
 }
