@@ -52,13 +52,14 @@ repeat (numOfElements - 1) times
   public static void insertionSort(int[] data){
     int sorted = 0;
     int temp = 0;
-    for (int i=0; i<data.length;i++){
-      for (int j = sorted; j> 0; j--){
-        if (data[i]<data[j]){
-          temp = data[j];
-          data[j]= data[i];
-        }
+    for (int i=1; i<data.length;i++){
+      int curr = data[i];
+      int j = i-1;
+      while (j >= 0 && data[j]>curr){
+        data[j+1] = data[j];
+        j = j-1;
       }
+      data[j+1] = curr;
     }
   }
 
