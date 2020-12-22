@@ -50,4 +50,18 @@ repeat (numOfElements - 1) times
   }
 
 
+  public static void insertionSort(int[] data){
+    int sorted = 0;
+    int temp = 0;
+    for (int i=0; i<data.length;i++){
+      for (int j = sorted; j> 0; j--){
+        if (data[i]<data[j]){
+          temp = data[j];
+          data[j]= data[i];
+        }
+      }
+    }
+  }
+
+
 }
