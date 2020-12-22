@@ -36,16 +36,15 @@ repeat (numOfElements - 1) times
     int temp = 0;
     int index = 0;
     for (int i = 0; i < data.length -1;i++){
-      int small = data[i];
-      for (int j = 0; j< data.length; j++){
-        if (data[j]<small){
-          small = data[j];
-          index = j;
+      int sorted = i;
+      for (int j = i+1; j< data.length; j++){
+        if (data[j]<data[sorted]){
+          sorted = j;
         }
       }
-      temp = data[i];
-      data[i] = small;
-      data[index]=temp;
+      temp = data[sorted];
+      data[sorted] = data[i];
+      data[i]=temp;
     }
   }
 
