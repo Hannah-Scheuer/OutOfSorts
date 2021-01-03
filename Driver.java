@@ -18,11 +18,25 @@ public class Driver{
         }
 
       }else if(args[2].equals("equal")){
-	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        Random rng = new Random();
+        int hello = rng.nextInt() % 1000;
+        for(int i =  0; i < randData.length; i++ ){
+          randData[i]=(hello);
+        }
+
       }else if(args[2].equals("sorted")){
-	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        Random rng = new Random();
+        int hello = rng.nextInt() % 1000;
+        for(int i =  0; i < randData.length; i++ ){
+          randData[i]=(hello+i);
+        }
+
       }else if(args[2].equals("reversed")){
-	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        Random rng = new Random();
+        int hello = rng.nextInt() % 1000;
+        for(int i =  0; i < randData.length; i++ ){
+          randData[i]=(hello-i);
+        }
       }
 
       if(args[1].equals("bubble")){
