@@ -7,12 +7,16 @@ public class Driver{
       System.out.println("supported STYLE: random,equal,sorted,reversed");
     }else{
 
-
       int[] randData = new int[Integer.parseInt(args[0])];
+
 
       //overhead: 1 random array generation.
       if(args.length < 3 || args[2].equals("random")){
-	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        Random rng = new Random();
+        for(int i =  0; i < randData.length; i++ ){
+          randData[i]=(rng.nextInt() % 1000);
+        }
+
       }else if(args[2].equals("equal")){
 	      System.out.println("YOU MUST EDIT THIS FILE BEFORE USING IT!!! REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
       }else if(args[2].equals("sorted")){
